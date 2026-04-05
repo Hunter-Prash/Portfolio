@@ -1,40 +1,94 @@
 import { motion } from 'framer-motion';
+import type { ReactNode } from 'react';
+import {
+  SiCplusplus, SiJavascript, SiTypescript, SiNodedotjs, SiExpress,
+  SiReact, SiPostgresql, SiRedis,
+  SiDocker, SiGithub, SiPostman, SiSplunk,
+} from 'react-icons/si';
+import { FaJava, FaDatabase, FaTrophy, FaCloud, FaAws, FaServer, FaEnvelope, FaBolt, FaArchive, FaLayerGroup } from 'react-icons/fa';
+import { MdMonitorHeart, MdOutlineEventNote, MdSchedule, MdSpeed } from 'react-icons/md';
 
-const skillCategories = [
+interface Skill {
+  name: string;
+  icon: ReactNode;
+}
+
+interface SkillCategory {
+  title: string;
+  emoji: string;
+  color: string;
+  borderColor: string;
+  skills: Skill[];
+}
+
+const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     emoji: "💬",
     color: "from-blue-500/20 to-cyan-500/20",
     borderColor: "border-blue-500/30",
-    skills: ["C++", "Java", "JavaScript", "SQL"],
+    skills: [
+      { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
+      { name: "Java", icon: <FaJava className="text-red-400" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "SQL", icon: <FaDatabase className="text-blue-300" /> },
+    ],
   },
   {
     title: "Backend & Frameworks",
     emoji: "⚙️",
     color: "from-emerald-500/20 to-green-500/20",
     borderColor: "border-emerald-500/30",
-    skills: ["Node.js", "Express.js", "React.js", "TypeScript"],
+    skills: [
+      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-zinc-300" /> },
+      { name: "React.js", icon: <SiReact className="text-cyan-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+    ],
   },
   {
     title: "Databases & Cloud",
     emoji: "☁️",
     color: "from-purple-500/20 to-violet-500/20",
     borderColor: "border-purple-500/30",
-    skills: ["PostgreSQL", "DynamoDB", "Redis", "AWS", "Lambda", "EC2", "RDS", "SQS", "SNS", "S3", "EventBridge"],
+    skills: [
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+      { name: "DynamoDB", icon: <FaDatabase className="text-blue-300" /> },
+      { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+      { name: "AWS", icon: <FaAws className="text-orange-400" /> },
+      { name: "Lambda", icon: <FaBolt className="text-orange-400" /> },
+      { name: "EC2", icon: <FaServer className="text-orange-300" /> },
+      { name: "RDS", icon: <FaDatabase className="text-blue-400" /> },
+      { name: "SQS", icon: <FaEnvelope className="text-purple-400" /> },
+      { name: "SNS", icon: <FaCloud className="text-pink-400" /> },
+      { name: "S3", icon: <FaArchive className="text-green-500" /> },
+      { name: "EventBridge", icon: <MdOutlineEventNote className="text-purple-300" /> },
+    ],
   },
   {
     title: "Tools & Observability",
     emoji: "🛠️",
     color: "from-orange-500/20 to-amber-500/20",
     borderColor: "border-orange-500/30",
-    skills: ["Docker", "GitHub", "Postman", "CloudFormation", "DynaTrace", "Splunk", "Control-M", "DPA"],
+    skills: [
+      { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+      { name: "GitHub", icon: <SiGithub className="text-zinc-200" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+      { name: "CloudFormation", icon: <FaLayerGroup className="text-orange-300" /> },
+      { name: "DynaTrace", icon: <MdMonitorHeart className="text-green-400" /> },
+      { name: "Splunk", icon: <SiSplunk className="text-green-400" /> },
+      { name: "Control-M", icon: <MdSchedule className="text-blue-300" /> },
+      { name: "DPA", icon: <MdSpeed className="text-yellow-400" /> },
+    ],
   },
   {
     title: "Coding",
     emoji: "🏆",
     color: "from-yellow-500/20 to-orange-500/20",
     borderColor: "border-yellow-500/30",
-    skills: ["LeetCode (500+ problems solved)"],
+    skills: [
+      { name: "LeetCode (500+ solved)", icon: <FaTrophy className="text-yellow-400" /> },
+    ],
   },
 ];
 
@@ -146,9 +200,10 @@ export default function About() {
                     {category.skills.map((skill, skillIdx) => (
                       <span
                         key={skillIdx}
-                        className="px-3 py-1.5 bg-zinc-900/60 hover:bg-zinc-800/80 transition-colors text-zinc-300 text-sm font-medium rounded-md border border-zinc-700/50"
+                        className="px-3 py-1.5 bg-zinc-900/60 hover:bg-zinc-800/80 transition-colors text-zinc-300 text-sm font-medium rounded-md border border-zinc-700/50 inline-flex items-center gap-1.5"
                       >
-                        {skill}
+                        <span className="text-base">{skill.icon}</span>
+                        {skill.name}
                       </span>
                     ))}
                   </div>

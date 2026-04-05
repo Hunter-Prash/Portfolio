@@ -34,7 +34,7 @@ export default function Contact() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
             <motion.a
-              href="mailto:hello@example.com"
+              href="mailto:rajaji.prashant@gmail.com"
               className="px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -42,7 +42,7 @@ export default function Contact() {
               👋 Say Hello
             </motion.a>
             <motion.a
-              href="www.linkedin.com/in/prashant-rajaji"
+              href="https://www.linkedin.com/in/prashant-rajaji"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-4 rounded-full glass hover:bg-zinc-800/50 text-white font-bold text-lg transition-all flex items-center gap-2"
@@ -53,6 +53,10 @@ export default function Contact() {
               LinkedIn Profile
             </motion.a>
           </div>
+
+          <p className="mt-8 text-zinc-400 text-sm font-bold relative z-10">
+            📬 rajaji.prashant@gmail.com
+          </p>
         </motion.div>
 
         <footer className="mt-20 pt-8 border-t border-zinc-800/50 flex flex-col md:flex-row items-center justify-between gap-4">

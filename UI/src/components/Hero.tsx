@@ -54,7 +54,7 @@ export default function Hero() {
         animate={{ y: [0, -15, 0], rotate: [-2, 2, -2] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >
-        const skills = ["🔥", "🚀"] 
+        const skills = ["🔥", "🚀"]
       </motion.div>
       <motion.div
         className="absolute top-60 right-16 glass rounded-lg px-4 py-2 text-xs font-mono text-purple-400/60 hidden lg:block border border-zinc-800/50"
@@ -69,6 +69,34 @@ export default function Hero() {
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       >
         npm run deploy 🚀
+      </motion.div>
+      <motion.div
+        className="absolute top-44 right-1/3 glass rounded-lg px-4 py-2 text-xs font-mono text-yellow-400/60 hidden lg:block border border-zinc-800/50"
+        animate={{ y: [0, 12, 0], rotate: [-1, 3, -1] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+      >
+        sam build && sam deploy ☁️
+      </motion.div>
+      <motion.div
+        className="absolute bottom-60 right-24 glass rounded-lg px-4 py-2 text-xs font-mono text-orange-400/60 hidden lg:block border border-zinc-800/50"
+        animate={{ y: [0, -18, 0], rotate: [2, -1, 2] }}
+        transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+      >
+        aws configure --profile dev 🔑
+      </motion.div>
+      <motion.div
+        className="absolute top-80 left-16 glass rounded-lg px-4 py-2 text-xs font-mono text-cyan-400/60 hidden lg:block border border-zinc-800/50"
+        animate={{ y: [0, 14, 0], rotate: [-2, 1, -2] }}
+        transition={{ duration: 8.5, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
+      >
+        docker compose up -d 🐳
+      </motion.div>
+      <motion.div
+        className="absolute bottom-32 right-1/3 glass rounded-lg px-4 py-2 text-xs font-mono text-pink-400/60 hidden lg:block border border-zinc-800/50"
+        animate={{ y: [0, -12, 0], rotate: [1, -2, 1] }}
+        transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+      >
+        aws lambda invoke --function ⚡
       </motion.div>
 
       <div className="max-w-4xl mx-auto px-6 text-center z-10 pb-32">
@@ -166,7 +194,7 @@ export default function Hero() {
             🚀 View My Work
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/Hunter-Prash"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3.5 rounded-full glass text-white font-medium hover:bg-zinc-800/50 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"

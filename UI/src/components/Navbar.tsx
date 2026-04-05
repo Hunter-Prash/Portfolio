@@ -16,6 +16,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -46,10 +47,10 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="mailto:rajaji.prashant@gmail.com"
             className="px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-colors shadow-[0_0_15px_rgba(37,99,235,0.4)]"
           >
-            Hire Me
+            ✉️ Hire Me
           </a>
         </div>
 

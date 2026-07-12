@@ -41,17 +41,15 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-zinc-400 hover:text-white transition-colors text-sm font-medium tracking-wide"
+              className={
+                link.name === 'Contact'
+                  ? "px-5 py-2.5 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-medium text-sm transition-colors shadow-[0_0_15px_rgba(225,29,72,0.6)]"
+                  : "text-zinc-400 hover:text-white transition-colors text-sm font-medium tracking-wide"
+              }
             >
               {link.name}
             </a>
           ))}
-          <a
-            href="mailto:rajaji.prashant@gmail.com"
-            className="px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-colors shadow-[0_0_15px_rgba(37,99,235,0.4)]"
-          >
-            ✉️ Hire Me
-          </a>
         </div>
 
         {/* Mobile Nav Toggle */}

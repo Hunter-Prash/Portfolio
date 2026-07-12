@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #0ea5e9;
-  --color-brand-glow: rgba(14, 165, 233, 0.5);
+  --color-brand: #f43f5e;
+  --color-brand-glow: rgba(244, 63, 94, 0.5);
 }
 
 html {
@@ -25,7 +25,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #38bdf8, #818cf8);
+  background: linear-gradient(to right, #22d3ee, #f43f5e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

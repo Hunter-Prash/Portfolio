@@ -1,63 +1,52 @@
 import { motion } from 'framer-motion';
+import { FaReact, FaNodeJs, FaAws, FaJava, FaDocker } from 'react-icons/fa';
+import { SiTypescript, SiPostgresql, SiSpringboot } from 'react-icons/si';
+import { useNavigate } from 'react-router-dom';
 
 const projects = [
   {
-    title: 'Service Desk Triage AI',
-    emoji: '🤖',
-    description: 'An AI-powered tool that automatically categorizes and routes incoming IT support tickets using NLP, significantly reducing manual triage time.',
-    tech: ['React', 'Node.js', 'OpenAI API', 'Tailwind'],
-    link: '#',
+    title: 'LogStream',
+    emoji: '💻',
+    description: "It's a full stack platform used to analyze logs coming from various applications fully hosted on AWS. Helps teams reduce manual triaging times of incidents.",
+    tech: [
+      { name: 'React', icon: <FaReact className="text-sm" />, color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/20' },
+      { name: 'Node.js', icon: <FaNodeJs className="text-sm" />, color: 'text-green-400 bg-green-400/10 border-green-400/20' },
+      { name: 'TypeScript', icon: <SiTypescript className="text-sm" />, color: 'text-blue-400 bg-blue-400/10 border-blue-400/20' },
+      { name: 'PostgreSQL', icon: <SiPostgresql className="text-sm" />, color: 'text-indigo-400 bg-indigo-400/10 border-indigo-400/20' },
+      { name: 'AWS (Lambda, RDS, EventBridge, SQS, SNS, ECR, ECS)', icon: <FaAws className="text-sm" />, color: 'text-orange-400 bg-orange-400/10 border-orange-400/20' }
+    ],
+    link: 'https://logstream-frontend.vercel.app',
     github: '#',
-    color: 'from-blue-500/10 to-cyan-500/10',
-    borderHover: 'hover:border-blue-500/50',
-    difficulty: 'Advanced',
-    xp: 850,
+    color: 'from-cyan-500/10 to-rose-500/10',
+    borderHover: 'hover:border-rose-500/50',
+    detailPage: '/project/logstream',
   },
   {
-    title: 'Cloud Asset Manager',
-    emoji: '☁️',
-    description: 'A full-stack dashboard for tracking hardware and software assets across an organization. Features RBAC and automated compliance reporting.',
-    tech: ['Next.js', 'PostgreSQL', 'Prisma', 'TypeScript'],
+    title: 'Payment Gateway',
+    emoji: '💳',
+    description: "A robust payment gateway integration handling secure transactions and high throughput processing.",
+    upcoming: true,
+    tech: [
+      { name: 'Java', icon: <FaJava className="text-sm" />, color: 'text-red-400 bg-red-400/10 border-red-400/20' },
+      { name: 'Spring Boot', icon: <SiSpringboot className="text-sm" />, color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20' },
+      { name: 'AWS', icon: <FaAws className="text-sm" />, color: 'text-orange-400 bg-orange-400/10 border-orange-400/20' },
+      { name: 'Docker', icon: <FaDocker className="text-sm" />, color: 'text-blue-400 bg-blue-400/10 border-blue-400/20' }
+    ],
     link: '#',
     github: '#',
-    color: 'from-purple-500/10 to-violet-500/10',
-    borderHover: 'hover:border-purple-500/50',
-    difficulty: 'Advanced',
-    xp: 920,
-  },
-  {
-    title: 'Network Monitor Pro',
-    emoji: '📡',
-    description: 'A lightweight utility that pings critical services and visually alerts administrators before major outages. Born from a real IT pain point.',
-    tech: ['Python', 'FastAPI', 'React', 'WebSockets'],
-    link: '#',
-    github: '#',
-    color: 'from-emerald-500/10 to-green-500/10',
-    borderHover: 'hover:border-emerald-500/50',
-    difficulty: 'Intermediate',
-    xp: 650,
+    color: 'from-rose-500/10 to-cyan-500/10',
+    borderHover: 'hover:border-cyan-500/50',
   },
 ];
 
-function DifficultyBadge({ level }: { level: string }) {
-  const colorMap: Record<string, string> = {
-    Beginner: 'bg-green-500/20 text-green-400 border-green-500/30',
-    Intermediate: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
-    Advanced: 'bg-red-500/20 text-red-400 border-red-500/30',
-  };
-  return (
-    <span className={`text-xs font-bold px-2 py-0.5 rounded-md border ${colorMap[level] || colorMap.Beginner}`}>
-      {level}
-    </span>
-  );
-}
-
 export default function Projects() {
+  const navigate = useNavigate();
+
   return (
     <section id="projects" className="py-24 relative border-y border-zinc-800/30">
       {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-500/50 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -70,9 +59,9 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured <span className="text-gradient">Work</span> 🏗️
           </h2>
-          <div className="w-20 h-1 bg-purple-500 rounded-full"></div>
+          <div className="w-20 h-1 bg-rose-500 rounded-full shadow-[0_0_10px_rgba(244,63,94,0.5)]"></div>
           <p className="text-zinc-400 mt-6 max-w-2xl text-lg">
-            Quest log of completed projects. Each one earned XP and unlocked new abilities! 🎮
+            A showcase of my completed projects and works. 🚀
           </p>
         </motion.div>
 
@@ -84,7 +73,8 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className={`group rounded-2xl border border-zinc-800 ${project.borderHover} transition-all cursor-pointer hover:shadow-xl relative overflow-hidden`}
+              onClick={() => project.detailPage && window.open(project.detailPage, '_blank')}
+              className={`group rounded-2xl border border-zinc-800 ${project.borderHover} transition-all ${project.detailPage ? 'cursor-pointer' : ''} hover:shadow-xl relative overflow-hidden`}
             >
               {/* Gradient background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -98,38 +88,37 @@ export default function Projects() {
                 >
                   {project.emoji}
                 </motion.span>
-                {/* XP Badge */}
-                <div className="absolute top-3 right-3 glass rounded-lg px-3 py-1 border border-zinc-700/50 flex items-center gap-1">
-                  <span className="text-yellow-400 text-xs">⭐</span>
-                  <span className="text-yellow-400 text-xs font-bold font-mono">{project.xp} XP</span>
-                </div>
-                {/* Difficulty badge */}
-                <div className="absolute top-3 left-3">
-                  <DifficultyBadge level={project.difficulty} />
-                </div>
+                
+                {project.upcoming && (
+                  <div className="absolute top-3 left-3 glass rounded-lg px-3 py-1 border border-cyan-500/50 flex items-center gap-1 z-20 shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+                    <span className="text-cyan-400 text-xs font-bold uppercase tracking-wider">🚀 Upcoming</span>
+                  </div>
+                )}
               </div>
 
               <div className="p-6 relative z-10">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="px-2 py-1 text-[10px] font-bold rounded bg-rose-500/10 text-rose-400 border border-rose-500/30 hover:bg-rose-500/20 hover:border-rose-500/50 hover:shadow-[0_0_10px_rgba(244,63,94,0.4)] transition-all uppercase tracking-wide">
+                      Code
+                    </a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="px-2 py-1 text-[10px] font-bold rounded bg-rose-500/10 text-rose-400 border border-rose-500/30 hover:bg-rose-500/20 hover:border-rose-500/50 hover:shadow-[0_0_10px_rgba(244,63,94,0.4)] transition-all uppercase tracking-wide">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
                 <p className="text-zinc-400 mb-5 text-sm leading-relaxed">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, techIdx) => (
-                    <span key={techIdx} className="px-2.5 py-1 text-xs font-semibold bg-zinc-800/80 text-zinc-300 rounded-md border border-zinc-700/50">
-                      {tech}
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((techItem, techIdx) => (
+                    <span key={techIdx} className={`px-2.5 py-1 text-xs font-semibold flex items-center gap-1.5 rounded-md border ${techItem.color}`}>
+                      {techItem.icon}
+                      {techItem.name}
                     </span>
                   ))}
-                </div>
-
-                <div className="flex items-center gap-4 border-t border-zinc-800/80 pt-4">
-                  <a href={project.github} className="text-zinc-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-1.5 hover:scale-105">
-                    💻 Code
-                  </a>
-                  <a href={project.link} className="text-zinc-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-1.5 hover:scale-105">
-                    🔗 Live Demo
-                  </a>
                 </div>
               </div>
             </motion.div>

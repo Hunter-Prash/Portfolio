@@ -25,41 +25,41 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     emoji: "💬",
-    color: "from-blue-500/20 to-cyan-500/20",
-    borderColor: "border-blue-500/30",
+    color: "from-cyan-500/20 to-blue-500/20",
+    borderColor: "border-cyan-500/30",
     skills: [
-      { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
+      { name: "C++", icon: <SiCplusplus className="text-cyan-400" /> },
       { name: "Java", icon: <FaJava className="text-red-400" /> },
       { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "SQL", icon: <FaDatabase className="text-blue-300" /> },
+      { name: "SQL", icon: <FaDatabase className="text-cyan-300" /> },
     ],
   },
   {
     title: "Backend & Frameworks",
     emoji: "⚙️",
-    color: "from-emerald-500/20 to-green-500/20",
-    borderColor: "border-emerald-500/30",
+    color: "from-rose-500/20 to-pink-500/20",
+    borderColor: "border-rose-500/30",
     skills: [
-      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
+      { name: "Node.js", icon: <SiNodedotjs className="text-rose-400" /> },
       { name: "Express.js", icon: <SiExpress className="text-zinc-300" /> },
       { name: "React.js", icon: <SiReact className="text-cyan-400" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-cyan-500" /> },
     ],
   },
   {
     title: "Databases & Cloud",
     emoji: "☁️",
-    color: "from-purple-500/20 to-violet-500/20",
-    borderColor: "border-purple-500/30",
+    color: "from-blue-500/20 to-cyan-500/20",
+    borderColor: "border-blue-500/30",
     skills: [
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
-      { name: "DynamoDB", icon: <FaDatabase className="text-blue-300" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-cyan-400" /> },
+      { name: "DynamoDB", icon: <FaDatabase className="text-cyan-300" /> },
       { name: "Redis", icon: <SiRedis className="text-red-500" /> },
       { name: "AWS", icon: <FaAws className="text-orange-400" /> },
       { name: "Lambda", icon: <FaBolt className="text-orange-400" /> },
       { name: "EC2", icon: <FaServer className="text-orange-300" /> },
-      { name: "RDS", icon: <FaDatabase className="text-blue-400" /> },
-      { name: "SQS", icon: <FaEnvelope className="text-purple-400" /> },
+      { name: "RDS", icon: <FaDatabase className="text-cyan-400" /> },
+      { name: "SQS", icon: <FaEnvelope className="text-blue-400" /> },
       { name: "SNS", icon: <FaCloud className="text-pink-400" /> },
       { name: "S3", icon: <FaArchive className="text-green-500" /> },
       { name: "EventBridge", icon: <MdOutlineEventNote className="text-purple-300" /> },
@@ -71,13 +71,13 @@ const skillCategories: SkillCategory[] = [
     color: "from-orange-500/20 to-amber-500/20",
     borderColor: "border-orange-500/30",
     skills: [
-      { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+      { name: "Docker", icon: <SiDocker className="text-cyan-400" /> },
       { name: "GitHub", icon: <SiGithub className="text-zinc-200" /> },
       { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
       { name: "CloudFormation", icon: <FaLayerGroup className="text-orange-300" /> },
       { name: "DynaTrace", icon: <MdMonitorHeart className="text-green-400" /> },
       { name: "Splunk", icon: <SiSplunk className="text-green-400" /> },
-      { name: "Control-M", icon: <MdSchedule className="text-blue-300" /> },
+      { name: "Control-M", icon: <MdSchedule className="text-cyan-300" /> },
       { name: "DPA", icon: <MdSpeed className="text-yellow-400" /> },
     ],
   },
@@ -106,7 +106,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             My <span className="text-gradient">Journey</span> 🗺️
           </h2>
-          <div className="w-20 h-1 bg-blue-500 rounded-full"></div>
+          <div className="w-20 h-1 bg-rose-500 rounded-full shadow-[0_0_10px_rgba(244,63,94,0.5)]"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">

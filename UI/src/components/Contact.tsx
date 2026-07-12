@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto px-6 text-center">
         <motion.div
@@ -14,8 +14,8 @@ export default function Contact() {
           className="glass rounded-3xl p-10 md:p-16 border border-zinc-800/80 shadow-2xl relative overflow-hidden"
         >
           {/* Animated corner decorations */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[50px]"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 blur-[50px]"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 blur-[50px]"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-rose-500/10 blur-[50px]"></div>
 
           <motion.span
             className="text-6xl inline-block mb-6"
@@ -35,7 +35,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
             <motion.a
               href="mailto:rajaji.prashant@gmail.com"
-              className="px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] flex items-center gap-2"
+              className="px-10 py-4 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-lg transition-all shadow-[0_0_20px_rgba(225,29,72,0.4)] flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -45,7 +45,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/prashant-rajaji"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 rounded-full glass hover:bg-zinc-800/50 text-white font-bold text-lg transition-all flex items-center gap-2"
+              className="px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)] flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -7,8 +7,8 @@ const experiences = [
     period: "Jan 2022 – Present",
     location: "India",
     emoji: "🏢",
-    color: "from-blue-500/20 to-cyan-500/20",
-    borderColor: "border-blue-500/30",
+    color: "from-rose-500/10 to-cyan-500/10",
+    borderColor: "border-rose-500/30",
     highlights: [
       "Managed and monitored production infrastructure for enterprise clients across AWS (EC2, Lambda, S3, RDS), ensuring 99.9% uptime SLA compliance.",
       "Built automation scripts to reduce manual triage and incident response time by 40%.",
@@ -41,7 +41,7 @@ export default function Experience() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-purple-500/50 to-transparent hidden md:block"></div>
+          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/50 via-rose-500/50 to-transparent hidden md:block"></div>
 
           {experiences.map((exp, idx) => (
             <motion.div
@@ -54,13 +54,13 @@ export default function Experience() {
             >
               {/* Timeline dot */}
               <div className="absolute left-0 md:left-8 top-8 -translate-x-1/2 hidden md:block">
-                <div className="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,0.6)]"></div>
+                <div className="w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_12px_rgba(34,211,238,0.6)]"></div>
               </div>
 
               {/* Experience Card */}
               <div className={`rounded-2xl p-8 border ${exp.borderColor} bg-gradient-to-br ${exp.color} backdrop-blur-sm relative overflow-hidden`}>
                 {/* Decorative glow */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/5 blur-[60px] pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-40 h-40 bg-rose-500/10 blur-[60px] pointer-events-none"></div>
 
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
@@ -68,7 +68,7 @@ export default function Experience() {
                     <span className="text-4xl">{exp.emoji}</span>
                     <div>
                       <h3 className="text-xl font-bold text-white">{exp.company}</h3>
-                      <p className="text-blue-400 font-semibold mt-1">{exp.role}</p>
+                      <p className="text-cyan-400 font-semibold mt-1">{exp.role}</p>
                       <p className="text-zinc-500 text-sm mt-1 flex items-center gap-2">
                         📅 {exp.period} &nbsp;·&nbsp; 📍 {exp.location}
                       </p>
@@ -76,12 +76,12 @@ export default function Experience() {
                   </div>
 
                   {/* Status badge */}
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-emerald-500/30 self-start">
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-cyan-500/30 self-start">
                     <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                     </span>
-                    <span className="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Current</span>
+                    <span className="text-cyan-400 text-xs font-semibold uppercase tracking-wider">Current</span>
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ export default function Experience() {
                       transition={{ delay: 0.3 + i * 0.1 }}
                       className="flex items-start gap-3 text-zinc-400 text-sm leading-relaxed"
                     >
-                      <span className="text-blue-400 mt-1 shrink-0">▹</span>
+                      <span className="text-rose-400 mt-1 shrink-0">▹</span>
                       {highlight}
                     </motion.li>
                   ))}

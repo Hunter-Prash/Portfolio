@@ -35,7 +35,7 @@ function TypingText() {
   return (
     <span className="text-gradient">
       {titles[titleIndex].slice(0, charIndex)}
-      <span className="animate-pulse text-blue-400">|</span>
+      <span className="animate-pulse text-cyan-400">|</span>
     </span>
   );
 }
@@ -45,26 +45,26 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
 
       {/* Background Glow Effects */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-rose-600/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
       {/* Floating code snippets */}
       <motion.div
-        className="absolute top-32 left-10 glass rounded-lg px-4 py-2 text-xs font-mono text-blue-400/60 hidden lg:block border border-zinc-800/50"
+        className="absolute top-32 left-10 glass rounded-lg px-4 py-2 text-xs font-mono text-cyan-400/60 hidden lg:block border border-zinc-800/50"
         animate={{ y: [0, -15, 0], rotate: [-2, 2, -2] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >
         const skills = ["🔥", "🚀"]
       </motion.div>
       <motion.div
-        className="absolute top-60 right-16 glass rounded-lg px-4 py-2 text-xs font-mono text-purple-400/60 hidden lg:block border border-zinc-800/50"
+        className="absolute top-60 right-16 glass rounded-lg px-4 py-2 text-xs font-mono text-rose-400/60 hidden lg:block border border-zinc-800/50"
         animate={{ y: [0, 20, 0], rotate: [2, -2, 2] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
       >
         git push origin main ✨
       </motion.div>
       <motion.div
-        className="absolute bottom-40 left-20 glass rounded-lg px-4 py-2 text-xs font-mono text-emerald-400/60 hidden lg:block border border-zinc-800/50"
+        className="absolute bottom-40 left-20 glass rounded-lg px-4 py-2 text-xs font-mono text-cyan-400/60 hidden lg:block border border-zinc-800/50"
         animate={{ y: [0, -10, 0], rotate: [1, -3, 1] }}
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       >
@@ -123,8 +123,8 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass mb-8 border border-zinc-800"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
           </span>
           <span className="text-xs font-medium text-zinc-300 tracking-wide uppercase">Open to Opportunities</span>
         </motion.div>
@@ -154,7 +154,7 @@ export default function Hero() {
           className="text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
           I'm a Software Engineer transitioning from a strong IT background.
-          I leverage deep problem-solving skills to build scalable, beautiful web applications.
+          I leverage deep problem-solving skills to build scalable, robust web applications.
         </motion.p>
 
         {/* Stats bar - gamified */}

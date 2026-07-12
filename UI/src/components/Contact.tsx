@@ -64,10 +64,10 @@ export default function Contact() {
             Made with <span className="text-red-400 animate-pulse">❤️</span> by Prashant · © {new Date().getFullYear()}
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-zinc-500 hover:text-white transition-colors hover:scale-110 inline-block">
+            <a href="https://www.linkedin.com/in/prashant-rajaji" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-cyan-400 transition-colors hover:scale-110 inline-block">
               LinkedIn
             </a>
-            <a href="#" className="text-zinc-500 hover:text-white transition-colors hover:scale-110 inline-block">
+            <a href="https://github.com/Hunter-Prash" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-cyan-400 transition-colors hover:scale-110 inline-block">
               GitHub
             </a>
           </div>

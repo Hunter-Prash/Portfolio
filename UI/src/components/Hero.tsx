@@ -194,6 +194,13 @@ export default function Hero() {
             🚀 View My Work
           </a>
           <a
+            href="/resume.pdf"
+            download="Prashant_Resume.pdf"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-cyan-500/50 bg-cyan-500/10 text-cyan-400 font-bold hover:bg-cyan-500/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+          >
+            📄 Download Resume
+          </a>
+          <a
             href="https://github.com/Hunter-Prash"
             target="_blank"
             rel="noopener noreferrer"
